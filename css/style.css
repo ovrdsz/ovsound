@@ -1,0 +1,661 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald";
+
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+    rgba(37, 12, 33, 0.719),
+    rgb(0, 0, 0)), url(/images/header-index.jpeg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+}
+
+.header-canciones{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+    rgba(37, 12, 33, 0.719),
+    rgb(0, 0, 0)), url(/images/header-canciones.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.header-subircanciones{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+    rgba(37, 12, 33, 0.719),
+    rgb(0, 0, 0)), url(/images/header-subirCanciones.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.logo {
+    width: 250px;
+    height: auto;
+}
+
+/*!--------------------NAV--------------------*/
+
+
+nav{
+    display: flex;
+    padding: 1% 3%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 35px;
+    position: relative;
+}
+
+.nav-links ul li a{
+    color: #f7f7f7;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: 200;
+}
+
+.nav-links i{
+    font-size: 300px;
+    color: #000000;
+}
+
+/*!AFTER EN EL NAV*/
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #bd610c;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+/*?EFECTO EN EL NAV INDEX*/
+body.index .nav-links ul li::after{
+    background: #bd610c;
+}
+
+/*?EFECTO EN EL NAV CANCIONES*/
+body.canciones .nav-links ul li::after{
+    background: #730e89;
+}
+
+/*?EFECTO EN EL NAV SUBIR CANCIONES*/
+body.subircanciones .nav-links ul li::after{
+    background: #b9c50e;
+}
+
+
+nav .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 23px;
+    font-weight: 200;
+    color: #f7f7f7;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+/*!HOVER BOTON LOGIN*/
+nav .btnLogin-popup:hover{
+    background: #bd610c;
+    color: #fff;
+    border: #000000;
+}
+
+/*?HOVER BOTON LOGIN INDEX*/
+body.index nav .btnLogin-popup:hover {
+    background: #bd610c;
+    color: #fff;
+    border: #000000;
+}
+
+/*?HOVER BOTON LOGIN CANCIONES*/
+body.canciones nav .btnLogin-popup:hover {
+    background: #730e89;
+    color: #fff;
+    border: #000000;
+}
+
+/*?HOVER BOTON LOGIN SUBIR CANCIONES*/
+body.subircanciones nav .btnLogin-popup:hover {
+    background: #b9c50e;
+    color: #fff;
+    border: #000000;
+}
+
+/*!----------------------------------------*/
+
+/*!--------------------HEADER--------------------*/
+
+.texto-header{
+    color: #ffffff;
+    position: absolute;
+    text-align:center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+/*!TEXTO HEADER*/
+.texto-header h1{
+    font-size: 90px;
+    font-weight: 600;
+}
+.texto-header p{
+    font-size: 28px;
+    font-weight: 400;
+    color: #bd610c;
+}
+
+/*?TEXTO HEADER INDEX*/
+body.index .texto-header h1{
+    font-size: 90px;
+    font-weight: 600;
+}
+body.index .texto-header p{
+    font-size: 28px;
+    font-weight: 400;
+    color: #bd610c;
+}
+
+/*?TEXTO HEADER CANCIONES*/
+body.canciones .texto-header{
+    top: 18%;
+    left: 50%;
+    display: inline-block;
+
+}
+
+body.canciones .texto-header h1{
+    font-size: 90px;
+    font-weight: 400;
+    display: inline-block;
+
+
+}
+body.canciones .texto-header p{
+    font-size: 80px;
+    font-weight: 600;
+    color: #730e89;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/*?TEXTO HEADER SUBIR CANCIONES*/
+body.subircanciones .texto-header{
+    top: 18%;
+    left: 50%;
+    display: inline-block;
+}
+body.subircanciones .texto-header h1{
+    font-size: 90px;
+    font-weight: 400;
+    display: inline-block;
+}
+body.subircanciones .texto-header p{
+    font-size: 80px;
+    font-weight: 600;
+    color: #b9c50e;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/*!----------------------------------------------*/
+
+/*!--------------------WRAPPER LOGIN/REGISTER--------------------*/
+
+nav svg{
+    display: none;
+}
+.wrapper{
+    position: absolute;
+    /*
+    LOGIN CENTRADO
+    top: 25%;
+    left: 39%;
+    */
+    top: 15%;
+    left: 39%;
+    width: 400px;
+    height: 485px;
+    background: rgb(17, 17, 17);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform 0.5s ease, height 0.2s ease;
+    z-index: 2;
+}
+
+body.canciones .wrapper-canciones{
+    position: absolute;
+    transform: scale(1);
+    top: 14%;
+    left: 2%;
+    width: 400px;
+    height: 670px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    background-color: rgb(17, 17, 17);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(1);
+    transition: transform 0.5s ease, height 0.2s ease;
+    z-index: 2;
+}
+
+
+/*?CONTENEDOR FORM SUBIR CANCIONES*/
+body.subircanciones .wrapper{
+    transform: scale(1);
+    top: 20%;
+    left: 28%;
+    width: 890px;
+    height: 670px;
+    background-color: #0b0b1a;
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+body.canciones .btn-subir{
+    width: 100%;
+    height: 50px;
+    background: #730e89;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    transform: translateY(30%);
+}
+
+
+
+body.subircanciones .form-box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+
+body.subircanciones .subir-imagen input{
+    font-size: 15px;
+    margin-top: 20px;
+
+}
+body.subircanciones .subir-imagen label{
+    transform: translateY(-50%);
+}
+
+body.subircanciones .btn-subir{
+    width: 100%;
+    height: 50px;
+    background: #b9c50e;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    transform: translateY(30%);
+}
+
+body.subircanciones .wrapper h2{
+    font-size: 80px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 3px;
+    width: 100%;
+}
+
+body.subircanciones .wrapper p{
+    color: #b9c50e;
+}
+
+
+.wrapper.active-popup{
+    transform: scale(1);
+
+}
+
+.wrapper.active{
+    height: 620px;
+    top: 15%;
+}
+
+.form-box{
+    width: 80%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login{
+    transform: translateX(0);
+    transition: transform 0.2s ease;
+    
+    
+}
+
+.wrapper.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+    
+
+}
+
+.wrapper .form-box.register{
+    position: absolute;
+    transform: translateX(400px);
+    transition: transform 0.2s ease;
+    
+}
+
+.wrapper.active .form-box.register{
+
+    transform: translateX(0);
+    padding: 40px;
+}   
+
+.form-box h2{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 3px;
+
+
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    margin: 30px 0;
+}
+
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus ~ label,
+.input-box input:valid ~ label{
+    top: -6px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 300;
+    color: white;
+
+}
+
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    line-height: 57px;
+    color:white;
+}
+
+.remember-forgot{
+    font-size: 18px;
+    color: white;
+    font-weight: 300;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+
+}
+
+.remember-forgot label input{
+    accent-color: #bd610c;
+    margin-right: 3px;
+    
+}
+
+.remember-forgot a{
+    color: white;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover{
+    text-decoration: underline;
+    color: #bd610c;
+}
+
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #bd610c;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 20px;
+    color: white;
+    font-weight: 300;
+}
+
+.login-register{
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    margin: 20px 0 10px;
+}
+
+.login-register p a{
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-register p a:hover{
+    text-decoration: underline;
+    color: #bd610c;
+}
+
+.wrapper .icon-close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #bd610c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+/*!----------------------------------------------*/
+
+body.canciones .contenedor {
+    width: 1300px;
+    margin: auto;
+    margin-right: 130px;
+    padding-left: 10px;
+    padding-right: 10px
+
+}
+
+
+
+.contenedor h2 {
+    font-size: 26px;
+    margin: 20px 0;
+    text-align: center;
+}
+
+.contenedor-tabla li{
+    border-radius: 3px;
+    padding: 25px 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+.fila-tabla .col{
+    height: 50px;
+    display: flex;
+}
+
+.header-tabla {
+    background-color: #730e89;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.header-tabla-titulo{
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.fila-tabla {
+    background-color: #b6b3b3;
+    box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.1);
+
+}
+
+.col-1 {
+    flex-basis: 10%;
+}
+.col-2 {
+    flex-basis: 20%;
+}
+.col-3 {
+    flex-basis: 20%;
+}
+.col-4 {
+    flex-basis: 10%;
+}
+.col-5 {
+    flex-basis: 10%;
+} 
+.col-6 {
+    flex-basis: 20%;
+} 
+.col-7 {
+    flex-basis: 10%;
+} 
+
+.canciones .btnEditar {
+    background-color: #730e89;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    height: 45px;
+}
+
+.canciones .btnEditar:hover {
+    background-color: #b9c50e;
+}
+
+.canciones .btnEliminar {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    height: 45px;
+}
+
+.canciones .btnEliminar:hover {
+    background-color: #b9c50e;
+}
+
+.canciones .titulo-canciones{
+    color: #b6b3b3;
+    font-size: 70px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.canciones .titulo-canciones span{
+    color: #730e89;
+}
+
+.input-box input:focus{
+    outline: 0;
+}
+
+.input-box.error input{
+    border-color: #ff3860;
+}
+
+.input-box.succes input{
+    border-color: #09c372;
+}
+
+.input-box .error{
+    color: #ff3860;
+    font-size: 13px;
+    height: 13px;
+}

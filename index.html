@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ovsound</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+</head>
+<body class="index">
+    <section class="header">
+    <!--?NAV-->
+    <nav>
+        <a href="index.html"><img src="images/logo_blanco_naranjo.png" class="logo"></a>
+        <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="canciones.html">Canciones</a></li>
+            <li><a href="subircancion.html">Sube tu canción</a></li>
+            <button class="btnLogin-popup">Login</button>
+        </ul>
+        </div>
+            <!--ICONO X-->
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/></svg>
+    </nav>
+
+    <!--?WRAPPER LOGIN/REGISTRO-->
+    <div class="wrapper">
+        <span class="icon-close"><svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+        </span>
+        <!--!LOGIN-->
+        <div class="form-box login">
+            <h2>Login</h2>
+            <!--INPUTS DE EMAIL Y CONTRASENA-->
+            <form id="login">
+            <div class="input-box">
+                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></svg></span>
+                <input type="email"  maxlength="30" id="emaillogin">
+                <div class="error"></div>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/></svg></span>
+                <input type="password"  maxlength="30" id="contrasenalogin">
+                <div class="error"></div>
+                <label>Contraseña</label>
+            </div>
+            <!--PERMANECER CONECTADO/OLVIDASTE TU CONTR-->
+            <div class="remember-forgot">
+                <label><input type="checkbox">Permanecer conectado</label>
+                <a href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+            <!--BOTON LOGIN-->
+            <button type="submit" class="btn">Login</button>
+            <!--REGISTRARSE-->
+            <div class="login-register">
+                <p>¿No tienes una cuenta? <a 
+                href="#" class="register-link">Registrarse</a></p>
+            </div>
+            </form>
+        </div>
+
+        <!--!REGISTRO-->
+        <div class="form-box register">
+            <h2>Registrarse</h2>
+            <!--*INPUTS: USUARIO/EMAIL/CONTRASENA-->
+            <form class="form" id="form">
+                <div class="input-box">
+                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+                    <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                    </svg></span>
+                    <input type="text"  maxlength="30" id="nombreusuario">
+                    <div class="error"></div>
+                    <label>Usuario</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z"/></svg></span>
+                    <input type="email"  maxlength="30" id="email">
+                    <div class="error"></div>
+                    <label>Email</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/></svg></span>
+                    <input type="password"  maxlength="30"  id="contrasena">
+                    <div class="error"></div>
+                    <label>Contraseña</label>
+                </div>
+                <div class="input-box">
+                    <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock-fill" viewBox="0 0 16 16">
+                    <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2"/></svg>
+                    </span>
+                    <input type="password"  maxlength="30" id="confcontrasena">
+                    <div class="error"></div>
+                    <label>Confirmar Contraseña</label>
+                </div>
+                <!--PERMANECER CONECTADO/OLVIDASTE TU CONTR-->
+                <div class="remember-forgot">
+                    <label><input type="checkbox">Estoy de acuerdo con los terminos y condiciones</label>
+                </div>
+                <!--BOTON LOGIN-->
+                <button type="submit" class="btn" id="registrarse">Registrarse</button>
+                <!--REGISTRARSE-->
+                <div class="login-register">
+                <p>¿Ya tienes una cuenta? <a href="#" class="login-link">Inicia sesión</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="texto-header">
+        <h1>Escucha<p>a artistas nuevos</p>
+        Comparte <p>tus canciones favoritas</p>
+        Descarga <p>de forma segura y sencilla</p>
+        PD: <p>los 3 enunciados anteriores son mentira porque no supe cómo hacerlos 😢</p></h1>
+    </div>
+    </script>
+    <script src="loginRegistroAnimacion.js"></script>
+    <script type="module" src="index.js"></script>
+</section>
+</body>
+</html>

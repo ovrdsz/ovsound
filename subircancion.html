@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ovsound</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    
+</head>
+<body class="subircanciones">
+    <section class="header-subircanciones">
+    <!--?NAV-->
+    <nav>
+        <a href="index.html"><img src="images/logo_blanco_amarillo.png" class="logo"></a>
+        <div class="nav-links" id="navLinks">
+            <!--ICONO X -->
+            <svg xmlns="http://www.w3.org/2000/svg" onclick="esconderMenu()" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16">
+            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/></svg>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="canciones.html">Canciones</a></li>
+            <li><a href="subircancion.html">Sube tu canción</a></li>
+            <button class="btnLogin-popup">Login</button>
+
+        </ul>
+        </div>
+    </nav>
+
+    <!--?FORMULARIO REGISTRO CANCIONES-->
+    <div class="wrapper">
+        <h2 class="">Sube tu <p>canción</p></h2>
+        <div class="form-box">
+            <form class="column" id="form">
+                <div class="input-box">
+                    <input type="text" id="titulo" maxlength="30">
+                    <div class="error"></div>
+                    <label>Título</label>
+                </div>
+                <div class="input-box">
+                    <input type="date" id="fecha">
+                    <div class="error"></div>
+                    <label>Fecha</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="genero" maxlength="30">
+                    <div class="error"></div>
+                    <label>Género</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="autor" maxlength="30">
+                    <div class="error"></div>
+                    <label>Autor</label>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="album" maxlength="30">
+                    <div class="error"></div>
+                    <label>Álbum</label>
+                </div>
+                <div class="input-box subir-imagen">
+                    <input type="file" id="imagen" accept="image/*" >
+                    <div class="error"></div>
+                    <label>Imagen (.png)</label>
+                <button class="btn-subir" type="submit" id="submit">Subir</button>
+            </form>
+        </div>
+    </div>
+    <script src="subirCancion.js" type="module"></script>
+</section>
+</body>
+</html>
